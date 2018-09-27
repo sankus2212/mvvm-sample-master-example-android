@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+  <data>
+      <variable
+          name="model"
+          type="com.san.myapplication.LoginViewModel"/>
+  </data>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.san.myapplication.MainActivity">
+
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="111dp"
+            android:ems="10"
+            android:hint="Email"
+            app:addTextChangedListener="@{model.getEmailTextWatcher}"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/etEmail"
+            android:layout_below="@+id/etEmail"
+            android:layout_marginTop="94dp"
+            android:ems="10"
+            app:addTextChangedListener="@{model.getPasswordTextWatcher}"
+            android:hint="Password"
+            android:inputType="textPassword" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="81dp"
+            android:text="Login"
+            android:onClick="@{model.onLoginButtonClick}"/>
+
+    </RelativeLayout>
+</layout>
