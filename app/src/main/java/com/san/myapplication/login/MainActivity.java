@@ -1,21 +1,21 @@
-package com.san.myapplication;
+package com.san.myapplication.login;
 
 import android.arch.lifecycle.ViewModelProviders;
-import android.content.pm.ActivityInfo;
 import android.databinding.DataBindingUtil;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
 
+import com.san.myapplication.R;
 import com.san.myapplication.databinding.ActivityMainBinding;
 
-public class MainActivity extends AppCompatActivity implements LoginView{
+public class MainActivity extends AppCompatActivity implements LoginView {
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ActivityMainBinding binding = DataBindingUtil.setContentView(this,R.layout.activity_main);
+        ActivityMainBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
         binding.setModel(ViewModelProviders.of(this,
                 new LoginViewModelFactory(this,new LoginModel())).get(LoginViewModel.class));
     }

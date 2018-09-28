@@ -1,11 +1,7 @@
-package com.san.myapplication;
+package com.san.myapplication.login;
 
-import android.databinding.BaseObservable;
 import android.text.TextUtils;
 import android.util.Patterns;
-
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 /**
  * Created by sandeep on 27/9/18.

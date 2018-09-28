@@ -6,12 +6,12 @@
   <data>
       <variable
           name="model"
-          type="com.san.myapplication.LoginViewModel"/>
+          type="com.san.myapplication.login.LoginViewModel"/>
   </data>
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="com.san.myapplication.MainActivity">
+        tools:context="com.san.myapplication.login.MainActivity">
 
         <EditText
             android:id="@+id/etEmail"

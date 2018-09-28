@@ -1,4 +1,4 @@
-package com.san.myapplication;
+package com.san.myapplication.login;
 
 /**
  * Created by sandeep on 27/9/18.
